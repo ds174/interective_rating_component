@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+  background-color: #131518;
+}
+
+.interactive_board {
+  width: 26rem;
+  height: 26rem;
+  background-color: hsl(216, 12%, 54%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1rem;
+}
+
+.interactive_board .rating_component input {
+}
