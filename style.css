@@ -14,16 +14,44 @@ body {
   background-color: #131518;
 }
 
+h1 {
+  color: hsl(0, 0%, 100%);
+}
 .interactive_board {
   width: 26rem;
   height: 26rem;
-  background-color: hsl(216, 12%, 54%);
+  padding: 2rem;
+  background-color: hsl(213, 19%, 18%);
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: center;
   flex-direction: column;
   border-radius: 1rem;
 }
 
-.interactive_board .rating_component input {
+.star_symbol {
+  height: 3rem;
+  width: 3rem;
+  background-color: hsl(217, 12%, 63%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.rating_component{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.feedback_card{
+  visibility:  hidden;
+}
+
+.button {
+  background-color: orange;
+  color: white;
+  padding: 10px;
+  border-radius: 1rem;
 }

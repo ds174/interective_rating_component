@@ -37,9 +37,9 @@
   <body>
     <main>
       <div class="interactive_board">
-        <!-- Rating state start -->
+        <div class="star_symbol">
         <img src="images/icon-star.svg" alt="orange star">
-        <fieldset>
+        </div>
           <h1>How did we do?</h1>
 
           <p>
@@ -47,29 +47,32 @@
             feedback is appreciated to help us improve our offering!
           </p>
           <div class="rating_component">
-          <input type="radio" name="number" id="one" />
+          <input type="radio" name="rate" id="one" />
           <label for="one">1</label> <br />
-          <input type="radio" name="number" id="two" />
+          <input type="radio" name="rate" id="two" />
           <label for="two">2</label> <br />
-          <input type="radio" name="number" id="three" />
+          <input type="radio" name="rate" id="three" />
           <label for="three">3</label> <br />
-          <input type="radio" name="number" id="four" />
+          <input type="radio" name="rate" id="four" />
           <label for="four">4</label> <br />
-          <input type="radio" name="number" id="five" />
+          <input type="radio" name="rate" id="five" />
           <label for="five">5</label>
           </div>
 
-          <button class="btn">Submit</button>
-        </fieldset>
+          <a href="" class="button">Submit</a>
+      
 
         <!-- Rating state end -->
 
-        <!-- Thank you state start -->
 
+
+        <!-- Thank you state start -->
+          <div class="feedback_card">
         You selected
         <!-- Add rating here -->
         out of 5 Thank you! We appreciate you taking the time to give a rating.
         If you ever need more support, don’t hesitate to get in touch!
+        </div>
 
         <!-- Thank you state end -->
 
@@ -77,7 +80,7 @@
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
             >Frontend Mentor</a
-          >. Coded by <a href="#">Your Name Here</a>.
+          >. Coded by <a href="#">DS</a>.
         </div>
       </div>
     </main>
