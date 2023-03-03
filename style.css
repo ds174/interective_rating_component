@@ -12,6 +12,7 @@ body {
   place-items: center;
   text-align: center;
   background-color: #131518;
+  margin-top: 0px;
 }
 
 h1 {
@@ -19,9 +20,12 @@ h1 {
 }
 .interactive_board {
   width: 26rem;
-  height: 26rem;
   padding: 2rem;
-  background-color: hsl(213, 19%, 18%);
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
   display: flex;
   align-items: left;
   justify-content: center;
@@ -32,21 +36,55 @@ h1 {
 .star_symbol {
   height: 3rem;
   width: 3rem;
-  background-color: hsl(217, 12%, 63%);
+  background: #262e38;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  border-radius: 2rem;
+  /*   padding-left: 0;
+  margin-top: 0; */
 }
 
-.rating_component{
+.heading {
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 2rem;
+  float: left;
+  text-align: left;
+  height: 3rem;
+  font-size: 1.7rem;
+}
+
+.feedback-description {
+  height: 4rem;
+  font-weight: 400;
+  text-align: left;
+  color: #969fad;
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+.rating_component {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  margin-top: 1.5rem;
 }
 
-.feedback_card{
-  visibility:  hidden;
+.rating_component input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.rating_component label {
+  display: inline-block;
+  background-color: white;
+  font-size: 1rem;
+  border-radius: 1rem;
+}
+
+.feedback_card {
+  visibility: hidden;
 }
 
 .button {
@@ -54,4 +92,5 @@ h1 {
   color: white;
   padding: 10px;
   border-radius: 1rem;
+  margin-top: 2rem;
 }
