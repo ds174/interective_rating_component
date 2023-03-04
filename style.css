@@ -66,7 +66,7 @@ h1 {
 
 .rating_component {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 1.5rem;
 }
 
@@ -77,10 +77,29 @@ h1 {
 }
 
 .rating_component label {
-  display: inline-block;
-  background-color: white;
-  font-size: 1rem;
-  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262e38;
+  color: hsl(217, 12%, 63%);
+  padding: 10px 20px;
+  font-family: ;
+  font-size: 0.9rem;
+  border-radius: 2em;
+
+  height: 3rem;
+  width: 3rem;
+}
+
+.rating_component input[type="radio"]:checked + label {
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+
+.rating_component label:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
 }
 
 .feedback_card {
@@ -89,8 +108,15 @@ h1 {
 
 .button {
   background-color: orange;
+  text-decoration: none;
   color: white;
   padding: 10px;
   border-radius: 1rem;
   margin-top: 2rem;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
 }
