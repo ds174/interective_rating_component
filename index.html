@@ -21,6 +21,8 @@
       rel="stylesheet"
     />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
     <title>Interactive rating component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -47,15 +49,15 @@
           is appreciated to help us improve our offering!
         </p>
         <div class="rating_component">
-          <input type="radio" name="rate" id="one" />
+          <input type="radio" name="rate" id="one" value="1" />
           <label for="one">1</label> <br />
-          <input type="radio" name="rate" id="two" />
+          <input type="radio" name="rate" id="two" value="2" />
           <label for="two">2</label> <br />
-          <input type="radio" name="rate" id="three" />
+          <input type="radio" name="rate" id="three" value="3" />
           <label for="three">3</label> <br />
-          <input type="radio" name="rate" id="four" />
+          <input type="radio" name="rate" id="four" value="4" />
           <label for="four">4</label> <br />
-          <input type="radio" name="rate" id="five" />
+          <input type="radio" name="rate" id="five" value="5" />
           <label for="five">5</label>
         </div>
 
@@ -64,10 +66,19 @@
         <!-- Rating state end -->
 
         <!-- Thank you state start -->
-        
 
         <!-- Thank you state end -->
+        <script type="text/javascript">
+          $('input[name="rate"]').on("click", function () {
+            var rating = $('input[name="rate"]:checked').val();
+          });
+        </script>
 
+
+
+
+
+        
 
         <div class="attribution">
           Challenge by
