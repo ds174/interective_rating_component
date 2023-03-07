@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -25,19 +24,10 @@
 
     <title>Interactive rating component</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <main>
+       <!-- Rating state stra-->
       <div class="interactive_board">
         <div class="star_symbol">
           <img src="images/icon-star.svg" alt="orange star" />
@@ -61,32 +51,51 @@
           <label for="five">5</label>
         </div>
 
-        <a href="feedback_card.html" class="button">Submit</a>
+        <a href="#" class="button">Submit</a>
 
         <!-- Rating state end -->
 
-        <!-- Thank you state start -->
+        
+        
 
-        <!-- Thank you state end -->
-        <script type="text/javascript">
+       
+      <!--   <script type="text/javascript">
           $('input[name="rate"]').on("click", function () {
             var rating = $('input[name="rate"]:checked').val();
           });
-        </script>
+        </script> -->
+</div>
+
+<!-- Thank you state start -->
+<div class="interactive_board" id="second">
+      <img
+        class="feedback_image"
+        src="images/illustration-thank-you.svg"
+        alt=""
+      />
+      <div class="rating_number">
+        You selected
+      <script>innerHTML.document.querySelector('input[name="rate"]:checked').value;</script>
+       
+        out of 5
+      </div>
+
+      <h2 >Thank you!</h2>
+      <p class="feedback-description" id="second">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
+    </div>
+     <!-- Thank you state end -->
 
 
-
-
-
-        
-
-        <div class="attribution">
+     <div class="attribution">
           Challenge by
           <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
             >Frontend Mentor</a
           >. Coded by <a href="#">DS</a>.
         </div>
-      </div>
+
     </main>
   </body>
 </html>
