@@ -23,21 +23,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
     <title>Interactive rating component</title>
-
   </head>
   <body>
-    <main>
-       <!-- Rating state stra-->
-      <div class="interactive_board">
+    <div class="container"></div>
+
+      <!-- Rating state start-->
+
+      <div class="interactive_board" id="first">
+
         <div class="star_symbol">
-          <img src="images/icon-star.svg" alt="orange star" />
+          <img src="images/icon-star.svg" alt="star icon" />
         </div>
+
         <h1 class="heading">How did we do?</h1>
 
-        <p class="feedback-description">
+        <p class="feedback_question">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
+
         <div class="rating_component">
           <input type="radio" name="rate" id="one" value="1" />
           <label for="one">1</label> <br />
@@ -52,50 +56,43 @@
         </div>
 
         <a href="#" class="button">Submit</a>
-
-        <!-- Rating state end -->
-
-        
-        
-
-       
-      <!--   <script type="text/javascript">
-          $('input[name="rate"]').on("click", function () {
-            var rating = $('input[name="rate"]:checked').val();
-          });
-        </script> -->
-</div>
-
-<!-- Thank you state start -->
-<div class="interactive_board" id="second">
-      <img
-        class="feedback_image"
-        src="images/illustration-thank-you.svg"
-        alt=""
-      />
-      <div class="rating_number">
-        You selected
-      <script>innerHTML.document.querySelector('input[name="rate"]:checked').value;</script>
-       
-        out of 5
       </div>
+        <!-- Rating state end -->
+      
 
-      <h2 >Thank you!</h2>
-      <p class="feedback-description" id="second">
-        We appreciate you taking the time to give a rating. If you ever need
-        more support, don’t hesitate to get in touch!
-      </p>
-    </div>
-     <!-- Thank you state end -->
+      <!-- Thank you state start -->
+      <div class="interactive_board" id="second">
 
-
-     <div class="attribution">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by <a href="#">DS</a>.
+        <div class="feedback_image">
+        <img
+          src="images/illustration-thank-you.svg"
+          alt="mobile phone picture"
+        />
         </div>
 
-    </main>
+        <div class="feedback_mark">
+          You selected
+          <p id="rating_value"></p>
+          out of 5
+        </div>
+
+        <h2>Thank you!</h2>
+
+        <p class="feedback_phrase">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+      <!-- Thank you state end -->
+
+      <script type="text/javascript">
+        $('input[name="rate"]').on("click", function () {
+          var rating = $('input[name="rate"]:checked').val();
+          var ratingValue = document.getElementById("rating_value");
+          ratingValue.innerHTML = rating;
+        });
+      </script>
+
+    </div>
   </body>
 </html>

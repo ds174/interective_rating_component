@@ -1,175 +1,171 @@
+
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Overpass", sans-serif;
+ }
+
+ body { 
+
+   display: flex;
+   place-items: center;
+   text-align: center;
+   background-color: #131518;
+   margin-top: 0px;
+   flex-direction: column;
+ }
+
+ h1 {
+   color: hsl(0, 0%, 100%);
+ }
+
+ .interactive_board {
+   width: 26rem;
+   height: 26rem;
+   padding: 2rem;
+   background: radial-gradient(98.96% 98.96% at 50% 0%,
+       #232a34 0%,
+       #181e27 100%);
+   display: flex;
+   align-items: left;
+   justify-content: center;
+   flex-direction: column;
+   border-radius: 1rem;
+ }
+
+ .star_symbol {
+   height: 3rem;
+   width: 3rem;
+   background: #262e38;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 2rem;
+ }
+
+ .heading {
+   color: #ffffff;
+   font-weight: 700;
+   margin-top: 2rem;
+   float: left;
+   text-align: left;
+   height: 3rem;
+   font-size: 1.7rem;
+ }
+
+ .feedback_question {
+   height: 4rem;
+   font-weight: 400;
+   text-align: left;
+   color: #969fad;
+   font-size: 1rem;
+   line-height: 1.5em;
+ }
+
+ .rating_component {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 1.5rem;
+ }
+
+ .rating_component input[type="radio"] {
+   opacity: 0;
+   position: fixed;
+   width: 0;
+ }
+
+ .rating_component label {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #262e38;
+   color: hsl(217, 12%, 63%);
+   padding: 10px 20px;
+   font-family: "Overpass";
+   font-size: 0.9rem;
+   border-radius: 2em;
+
+   height: 3rem;
+   width: 3rem;
+ }
+
+ .rating_component input[type="radio"]:checked+label {
+   background-color: hsl(216, 12%, 54%);
+   color: hsl(0, 0%, 100%);
+ }
+
+ .rating_component label:hover {
+   background-color: hsl(25, 97%, 53%);
+   color: hsl(0, 0%, 100%);
+   cursor: pointer;
+ }
+
+ .feedback_card {
+   visibility: hidden;
+ }
+
+ .button {
+   background-color: orange;
+   text-decoration: none;
+   color: white;
+   padding: 10px;
+   border-radius: 1rem;
+   margin-top: 2rem;
+ }
+
+ .button:hover {
+   cursor: pointer;
+   background-color: hsl(0, 0%, 100%);
+   color: hsl(25, 97%, 53%);
+ }
+
+ .feedback_card {
+   display: none;
+ }
+
+
  .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
+   display: none;
+ }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Overpass", sans-serif;
-}
-
-html,
-body {
-  display: grid;
-  height: 100%;
-  place-items: center;
-  text-align: center;
-  background-color: #131518;
-  margin-top: 0px;
-}
-
-h1 {
-  color: hsl(0, 0%, 100%);
-}
-.interactive_board {
-  width: 26rem;
-  height: 26rem;
-  padding: 2rem;
-  background: radial-gradient(
-    98.96% 98.96% at 50% 0%,
-    #232a34 0%,
-    #181e27 100%
-  );
-  display: flex;
-  align-items: left;
-  justify-content: center;
-  flex-direction: column;
-  border-radius: 1rem;
-}
-
-.star_symbol {
-  height: 3rem;
-  width: 3rem;
-  background: #262e38;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 2rem;
-  /*   padding-left: 0;
-  margin-top: 0; */
-}
-
-.heading {
-  color: #ffffff;
-  font-weight: 700;
-  margin-top: 2rem;
-  float: left;
-  text-align: left;
-  height: 3rem;
-  font-size: 1.7rem;
-}
-
-.feedback-description {
-  height: 4rem;
-  font-weight: 400;
-  text-align: left;
-  color: #969fad;
-  font-size: 1rem;
-  line-height: 1.5em;
-}
-
-.rating_component {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1.5rem;
-}
-
-.rating_component input[type="radio"] {
-  opacity: 0;
-  position: fixed;
-  width: 0;
-}
-
-.rating_component label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #262e38;
-  color: hsl(217, 12%, 63%);
-  padding: 10px 20px;
-  font-family: "Overpass";
-  font-size: 0.9rem;
-  border-radius: 2em;
-
-  height: 3rem;
-  width: 3rem;
-}
-
-.rating_component input[type="radio"]:checked + label {
-  background-color: hsl(216, 12%, 54%);
-  color: hsl(0, 0%, 100%);
-}
-
-.rating_component label:hover {
-  background-color: hsl(25, 97%, 53%);
-  color: hsl(0, 0%, 100%);
-  cursor: pointer;
-}
-
-.feedback_card {
-  visibility: hidden;
-}
-
-.button {
-  background-color: orange;
-  text-decoration: none;
-  color: white;
-  padding: 10px;
-  border-radius: 1rem;
-  margin-top: 2rem;
-}
-
-.button:hover {
-  cursor: pointer;
-  background-color: hsl(0, 0%, 100%);
-  color: hsl(25, 97%, 53%);
-}
-
-.feedback_card {
-  display: none;
-}
+ /*feedback card styles*/
 
 
-.attribution {
-  display: none;
-}
+ .feedback_image {
+   width: 10rem;
+   height: 7rem;
+ }
 
-/*feedback card styles*/
+ .feedback_mark {
+   color: hsl(25, 97%, 53%);
+   padding-top: 1rem;
+ }
+
+ h2 {
+   color: white;
+   padding-top: 1rem;
+   font-size: 1.5rem;
+   font-weight: 700;
+   font-family: 'Overpass', sans-serif;
+   padding-bottom: 1rem;
+ }
+
+ .feedback_phrase{
+height: 4rem;
+   font-weight: 400;
+   text-align: center;
+   color: #969fad;
+   font-size: 1rem;
+   line-height: 1.5em;
+ }
+
+
+ #second {
+   align-items: center;
+   text-align: center;
+ }
 
 
 
-.feedback_image {
-  width: 10rem;
-  height: 7rem;
-}
-
-.rating_number {
-  color: hsl(25, 97%, 53%);
-  padding-top: 1rem;
-}
-
-h2 {
-  color: white;
-  padding-top: 1rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: 'Overpass', sans-serif;
-  padding-bottom: 1rem;
-} 
-
-
-#second {
-  align-items: center;
-  text-align: center;
-}
-
-
-
-
-
-
+ /* vscode.css-language-features */
