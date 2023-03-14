@@ -2,26 +2,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Overpass", sans-serif;
+  font-family: 'Overpass', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+ 
 }
 
 body {
-  display: flex;
-  place-items: center;
-  text-align: center;
-  background-color: #131518;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  flex-direction: column;
+  background-color: hsl(216, 12%, 8%);
+   font-family: 'Overpass', sans-serif;
 }
 
 /* nteractive board first */
 
 .interactive_board {
-  width: 26rem;
+  width: 25.75rem;
   height: 26rem;
   max-width: 26rem;
-  padding: 2rem;
+  padding: 1.18rem 2.438rem 2rem 2rem;
   background: radial-gradient(
     98.96% 98.96% at 50% 0%,
     #232a34 0%,
@@ -41,25 +47,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 2rem;
+  border-radius: 50%;
 }
 
 .heading {
   color: #ffffff;
   font-weight: 700;
-  margin-top: 2rem;
+  margin-top: 1.875rem;
   float: left;
   text-align: left;
   height: 3rem;
-  font-size: 1.7rem;
+  font-size: 1.75rem;
+  font-family: "Overpass", sans-serif;
+  font-;
 }
 
 .feedback_question {
   height: 4rem;
+  margin-top: 0.438rem;
   font-weight: 400;
   text-align: left;
   color: #969fad;
-  font-size: 1rem;
+  font-size: 0.938rem;
   line-height: 1.5em;
 }
 
@@ -86,8 +95,8 @@ body {
   font-size: 0.9rem;
   border-radius: 2em;
 
-  height: 3rem;
-  width: 3rem;
+  height: 3.188rem;
+  width: 3.188rem;
 }
 
 .rating_component input[type="radio"]:checked + label {
@@ -106,8 +115,13 @@ body {
   text-decoration: none;
   color: white;
   padding: 10px;
+  height: 2.813rem;
   border-radius: 1rem;
   margin-top: 2rem;
+  font-weight: 700;
+  font-size: 0.928rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .button:hover {
@@ -125,12 +139,17 @@ body {
 
 .feedback_mark {
   color: hsl(25, 97%, 53%);
-  padding-top: 0.5rem;
+   margin-top: 2rem;
+  padding-top:;
+  
   background: #262e38;
   display: flex;
-  align-items: center;
+  text-align: center;
   justify-content: center;
-  border-radius: 0.5rem;
+  place-items: center;
+  border-radius: 0.8rem;
+  width: 12.063rem;
+  height: 2rem;
 }
 
 h2 {
@@ -149,6 +168,7 @@ h2 {
   color: #969fad;
   font-size: 1rem;
   line-height: 1.5em;
+  font-size: 0.938rem;
 }
 
 #second {
