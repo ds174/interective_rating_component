@@ -25,12 +25,10 @@
     <title>Interactive rating component</title>
   </head>
   <body>
-    <div class="container"></div>
-
+    <div class="container">
       <!-- Rating state start-->
 
       <div class="interactive_board" id="first">
-
         <div class="star_symbol">
           <img src="images/icon-star.svg" alt="star icon" />
         </div>
@@ -55,25 +53,23 @@
           <label for="five">5</label>
         </div>
 
-        <a href="#" class="button">Submit</a>
+        <button href="#" class="button">Submit</button>
       </div>
-        <!-- Rating state end -->
-      
+      <!-- Rating state end -->
 
       <!-- Thank you state start -->
-      <div class="interactive_board" id="second">
-
+      <div class="interactive_board hide" id="second">
         <div class="feedback_image">
-        <img
-          src="images/illustration-thank-you.svg"
-          alt="mobile phone picture"
-        />
+          <img
+            src="images/illustration-thank-you.svg"
+            alt="mobile phone picture"
+          />
         </div>
 
         <div class="feedback_mark">
-          You selected
-          <p id="rating_value"></p>
-          out of 5
+          You selected&nbsp;
+          <p id="rating_value">0</p>
+          &nbsp;out of 5
         </div>
 
         <h2>Thank you!</h2>
@@ -83,16 +79,26 @@
           more support, don’t hesitate to get in touch!
         </p>
       </div>
+
       <!-- Thank you state end -->
-
-      <script type="text/javascript">
-        $('input[name="rate"]').on("click", function () {
-          var rating = $('input[name="rate"]:checked').val();
-          var ratingValue = document.getElementById("rating_value");
-          ratingValue.innerHTML = rating;
-        });
-      </script>
-
     </div>
+
+    <script type="text/javascript">
+      $('input[name="rate"]').on("click", function () {
+        var rating = $('input[name="rate"]:checked').val();
+        var ratingValue = document.getElementById("rating_value");
+        ratingValue.innerHTML = rating;
+      });
+
+      const submitButton = document.querySelector(".button");
+      const card1 = document.getElementById("first");
+      const card2 = document.getElementById("second");
+      submitButton.addEventListener("click", onSubmit);
+
+      function onSubmit() {
+        card1.classList.add("hide");
+        card2.classList.remove("hide");
+      }
+    </script>
   </body>
 </html>
