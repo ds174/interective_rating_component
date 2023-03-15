@@ -25,80 +25,82 @@
     <title>Interactive rating component</title>
   </head>
   <body>
-    <div class="container">
-      <!-- Rating state start-->
+    <main>
+      <div class="container">
+        <!-- Rating state start-->
 
-      <div class="interactive_board" id="first">
-        <div class="star_symbol">
-          <img src="images/icon-star.svg" alt="star icon" />
+        <div class="interactive_board" id="first">
+          <div class="star_symbol">
+            <img src="images/icon-star.svg" alt="star icon" />
+          </div>
+
+          <h1 class="heading">How did we do?</h1>
+
+          <p class="feedback_question">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+
+          <div class="rating_component">
+            <input type="radio" name="rate" id="one" value="1" />
+            <label for="one">1</label> <br />
+            <input type="radio" name="rate" id="two" value="2" />
+            <label for="two">2</label> <br />
+            <input type="radio" name="rate" id="three" value="3" />
+            <label for="three">3</label> <br />
+            <input type="radio" name="rate" id="four" value="4" />
+            <label for="four">4</label> <br />
+            <input type="radio" name="rate" id="five" value="5" />
+            <label for="five">5</label>
+          </div>
+
+          <button href="#" class="button">Submit</button>
+        </div>
+        <!-- Rating state end -->
+
+        <!-- Thank you state start -->
+        <div class="interactive_board hide" id="second">
+          <div class="feedback_image">
+            <img
+              src="images/illustration-thank-you.svg"
+              alt="mobile phone picture"
+            />
+          </div>
+
+          <div class="feedback_mark">
+            You selected&nbsp;
+            <p id="rating_value">0</p>
+            &nbsp;out of 5
+          </div>
+
+          <h2>Thank you!</h2>
+
+          <p class="feedback_phrase">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
         </div>
 
-        <h1 class="heading">How did we do?</h1>
-
-        <p class="feedback_question">
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
-
-        <div class="rating_component">
-          <input type="radio" name="rate" id="one" value="1" />
-          <label for="one">1</label> <br />
-          <input type="radio" name="rate" id="two" value="2" />
-          <label for="two">2</label> <br />
-          <input type="radio" name="rate" id="three" value="3" />
-          <label for="three">3</label> <br />
-          <input type="radio" name="rate" id="four" value="4" />
-          <label for="four">4</label> <br />
-          <input type="radio" name="rate" id="five" value="5" />
-          <label for="five">5</label>
-        </div>
-
-        <button href="#" class="button">Submit</button>
+        <!-- Thank you state end -->
       </div>
-      <!-- Rating state end -->
 
-      <!-- Thank you state start -->
-      <div class="interactive_board hide" id="second">
-        <div class="feedback_image">
-          <img
-            src="images/illustration-thank-you.svg"
-            alt="mobile phone picture"
-          />
-        </div>
+      <script type="text/javascript">
+        $('input[name="rate"]').on("click", function () {
+          var rating = $('input[name="rate"]:checked').val();
+          var ratingValue = document.getElementById("rating_value");
+          ratingValue.innerHTML = rating;
+        });
 
-        <div class="feedback_mark">
-          You selected&nbsp;
-          <p id="rating_value">0</p>
-          &nbsp;out of 5
-        </div>
+        const submitButton = document.querySelector(".button");
+        const card1 = document.getElementById("first");
+        const card2 = document.getElementById("second");
+        submitButton.addEventListener("click", onSubmit);
 
-        <h2>Thank you!</h2>
-
-        <p class="feedback_phrase">
-          We appreciate you taking the time to give a rating. If you ever need
-          more support, don’t hesitate to get in touch!
-        </p>
-      </div>
-
-      <!-- Thank you state end -->
-    </div>
-
-    <script type="text/javascript">
-      $('input[name="rate"]').on("click", function () {
-        var rating = $('input[name="rate"]:checked').val();
-        var ratingValue = document.getElementById("rating_value");
-        ratingValue.innerHTML = rating;
-      });
-
-      const submitButton = document.querySelector(".button");
-      const card1 = document.getElementById("first");
-      const card2 = document.getElementById("second");
-      submitButton.addEventListener("click", onSubmit);
-
-      function onSubmit() {
-        card1.classList.add("hide");
-        card2.classList.remove("hide");
-      }
-    </script>
+        function onSubmit() {
+          card1.classList.add("hide");
+          card2.classList.remove("hide");
+        }
+      </script>
+    </main>
   </body>
 </html>
